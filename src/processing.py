@@ -15,4 +15,3 @@ def sort_by_date(data: List[Dict[str, Any]], descending: bool = True) -> List[Di
     Возвращает новый список словарей, отсортированный по ключу 'date'.
     """
     return sorted(data, key=lambda x: datetime.fromisoformat(x["date"]), reverse=descending)
-123
