@@ -7,7 +7,6 @@ Operation = Dict[str, Any]
 
 @pytest.fixture()
 def operations_sample() -> List[Operation]:
-    # Базовый набор из условия
     return [
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
         {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
@@ -18,7 +17,6 @@ def operations_sample() -> List[Operation]:
 
 @pytest.fixture()
 def operations_equal_dates() -> List[Operation]:
-    # Одинаковые даты для проверки стабильности сортировки
     return [
         {"id": 1, "state": "EXECUTED", "date": "2024-01-01T00:00:00"},
         {"id": 2, "state": "CANCELED", "date": "2024-01-01T00:00:00"},
@@ -28,7 +26,6 @@ def operations_equal_dates() -> List[Operation]:
 
 @pytest.fixture()
 def operations_with_bad_date() -> List[Operation]:
-    # Некорректная дата для негативных тестов сортировки
     return [
         {"id": 1, "state": "EXECUTED", "date": "not-a-date"},
         {"id": 2, "state": "EXECUTED", "date": "2024-01-01T00:00:00"},
