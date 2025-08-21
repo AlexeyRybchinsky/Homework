@@ -21,9 +21,7 @@ def test_filter_by_state_default(operations_sample: List[Operation]) -> None:
         ("PENDING", []),
     ],
 )
-def test_filter_by_state_param(
-    operations_sample: List[Operation], state: str, expected_ids: List[int]
-) -> None:
+def test_filter_by_state_param(operations_sample: List[Operation], state: str, expected_ids: List[int]) -> None:
     result = filter_by_state(operations_sample, state=state)
     assert [i["id"] for i in result] == expected_ids
 

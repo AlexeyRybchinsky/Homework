@@ -2,7 +2,6 @@ import pytest
 
 from src.widget import get_date, mask_account_card
 
-
 # def test_mask_account_card_card() -> None:
 #     assert (
 #         mask_account_card("Visa Platinum 7000792289606361")
@@ -20,6 +19,7 @@ from src.widget import get_date, mask_account_card
 #
 # def test_get_date_with_z() -> None:
 #     assert get_date("2018-07-11T02:26:18Z") == "11.07.2018"
+
 
 @pytest.mark.parametrize(
     "raw, expected",
